@@ -14,10 +14,16 @@ public class SerializableDemo {
 	public static void main(String[] args) throws IOException, Exception {
 		Employee emp1 = new Employee("Usha", "Developer");
 //		//System.out.println(emp1);
-		File file = new File("D:\\obj.tmp");
-		ObjectOutputStream out = new ObjectOutputStream(new FileOutputStream(file));
-		out.writeObject(file);
+		File file = new File("D:\\obj.ser");
+		FileOutputStream fileOutputStream = new FileOutputStream(file);
+		ObjectOutputStream out = new ObjectOutputStream(fileOutputStream);
+		out.writeObject(emp1);
+		out.flush();
+		fileOutputStream.close();
+		
 		out.close();
+		
+		
 
 		ObjectInputStream in = new ObjectInputStream(new FileInputStream(file));
 		
