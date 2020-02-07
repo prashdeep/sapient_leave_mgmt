@@ -1,17 +1,23 @@
 package com.sapient.lms.model;
 
 public class Employee {
+	
 	private int empId;
 	private String empName;
 	private String deptName;
-	private LeaveDetails leaveDetails;
+	
 	
 	public Employee (int empId, String empName, String deptName) {
 		this.empId = empId;
 		this.deptName = deptName;
 		this.empName = empName;
-		this.leaveDetails = new LeaveDetails();
 	}
+	
+	public Employee (String empName, String deptName) {
+		this.deptName = deptName;
+		this.empName = empName;
+	}
+	
 
 	public int getEmpId() {
 		return empId;
@@ -33,13 +39,5 @@ public class Employee {
 	public void setDeptName(String deptName) {
 		this.deptName = deptName;
 	}
-
-	public LeaveDetails getLeaveDetails() {
-		return leaveDetails;
-	}
-
-	
-	
-	
 
 }
