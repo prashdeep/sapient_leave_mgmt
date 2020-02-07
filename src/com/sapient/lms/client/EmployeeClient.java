@@ -30,7 +30,7 @@ public class EmployeeClient {
 			
 			EmployeeService empService = new EmployeeService();
 			empService.saveEmployee(emp);
-			}
+		}
 		sc.close();
 		
 	}
